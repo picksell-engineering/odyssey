@@ -42,6 +42,7 @@ RUN set -ex \
     && apt-get install -y --no-install-recommends \
     libssl-dev  \
     openssl \
+    postgresql-client \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 COPY --from=builder /usr/local/lib /usr/local/lib
